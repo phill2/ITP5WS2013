@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Untitled Gantt Project" company="" webLink="http://" view-date="2013-11-08" view-index="0" gantt-divider-location="353" resource-divider-location="300" version="2.0" locale="de_AT">
+<project name="Untitled Gantt Project" company="" webLink="http://" view-date="2013-11-05" view-index="0" gantt-divider-location="353" resource-divider-location="300" version="2.0" locale="de_AT">
     <description/>
     <view zooming-state="default:2" id="gantt-chart">
         <field id="tpd3" name="Vorgang" width="57" order="0"/>
@@ -7,8 +7,8 @@
         <field id="tpd5" name="Ende" width="21" order="2"/>
     </view>
     <view id="resource-table">
-        <field id="0" name="Ressource" width="70" order="0"/>
-        <field id="1" name="Rolle" width="29" order="1"/>
+        <field id="0" name="Ressource" width="56" order="0"/>
+        <field id="1" name="Rolle" width="43" order="1"/>
     </view>
     <!-- -->
     <calendars>
@@ -39,7 +39,12 @@
         <task id="4" name="Erstes Treffen, Projektstart" color="#8cb6ce" meeting="false" start="2013-10-24" duration="1" complete="0" expand="true"/>
         <task id="2" name="Überlegungen zum Projekt" color="#8cb6ce" meeting="false" start="2013-10-31" duration="3" complete="0" expand="true"/>
         <task id="3" name="Dokumenterstellung" color="#8cb6ce" meeting="false" start="2013-11-11" duration="2" complete="0" expand="true"/>
-        <task id="5" name="Graphisches Konzept" color="#8cb6ce" meeting="false" start="2013-11-13" duration="3" complete="0" expand="true"/>
+        <task id="5" name="Graphisches Konzept" color="#8cb6ce" meeting="false" start="2013-11-13" duration="1" complete="0" expand="true"/>
+        <task id="6" name="Einrichten der Datenbank" color="#8cb6ce" meeting="false" start="2013-11-13" duration="1" complete="0" expand="true"/>
+        <task id="7" name="Grundlayout" color="#8cb6ce" meeting="false" start="2013-11-13" duration="1" complete="0" expand="true"/>
+        <task id="8" name="Coding" color="#8cb6ce" meeting="false" start="2013-11-13" duration="1" complete="0" expand="true"/>
+        <task id="9" name="Testen" color="#8cb6ce" meeting="false" start="2013-11-13" duration="1" complete="0" expand="true"/>
+        <task id="10" name="Abschluss" color="#8cb6ce" meeting="false" start="2013-11-13" duration="1" complete="0" expand="true"/>
     </tasks>
     <resources/>
     <allocations/>
