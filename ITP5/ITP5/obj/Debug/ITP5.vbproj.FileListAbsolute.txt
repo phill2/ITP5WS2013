@@ -1,0 +1,8 @@
+C:\Users\Sergej\Desktop\FH\BIF5\ITP5\ITP5\ITP5\bin\ITP5.dll
+C:\Users\Sergej\Desktop\FH\BIF5\ITP5\ITP5\ITP5\bin\ITP5.pdb
+C:\Users\Sergej\Desktop\FH\BIF5\ITP5\ITP5\ITP5\bin\ITP5.xml
+C:\Users\Sergej\Desktop\FH\BIF5\ITP5\ITP5\ITP5\obj\Debug\ITP5.Resources.resources
+C:\Users\Sergej\Desktop\FH\BIF5\ITP5\ITP5\ITP5\obj\Debug\ITP5.vbproj.GenerateResource.Cache
+C:\Users\Sergej\Desktop\FH\BIF5\ITP5\ITP5\ITP5\obj\Debug\ITP5.dll
+C:\Users\Sergej\Desktop\FH\BIF5\ITP5\ITP5\ITP5\obj\Debug\ITP5.xml
+C:\Users\Sergej\Desktop\FH\BIF5\ITP5\ITP5\ITP5\obj\Debug\ITP5.pdb

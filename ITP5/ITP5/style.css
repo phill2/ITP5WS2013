@@ -1,0 +1,32 @@
+﻿body {
+}
+
+#title {
+margin-top:50px;
+border:solid;
+border-color:black;
+font-size:x-large;
+font-style:italic;
+padding-left:40px;
+}
+
+
+#navigation {
+float:left;
+margin-top:50px;
+width:10%;
+border:solid;
+border-color:black;
+}
+
+
+
+#content {
+float:right;
+margin-top:25px;
+width:70%;
+height:200px;
+margin-right:150px;
+border:solid;
+border-color:black;
+}
