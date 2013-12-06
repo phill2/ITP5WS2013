@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="index.aspx" />
     <Content Include="PC.aspx" />
+    <Content Include="PS3.aspx" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -78,6 +79,13 @@
       <DependentUpon>PC.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PS3.aspx.cs">
+      <DependentUpon>PS3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS3.aspx.designer.cs">
+      <DependentUpon>PS3.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">

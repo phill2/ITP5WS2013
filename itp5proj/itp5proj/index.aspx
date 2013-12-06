@@ -13,14 +13,14 @@
     <div id="title">
         <h1>ITP 5 ASP.NET Homepage by Philipp Langer & Sergej Onishchuk</h1></div>
     <div id="navigation">
-        <asp:Menu ID="Menu" runat="server"  StaticDisplayLevels = "3" BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#7C6F57" StaticSubMenuIndent="10px">
+        <asp:Menu ID="Menu" OnMenuItemClick="Item_Click" runat="server"  StaticDisplayLevels = "3" BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#7C6F57" StaticSubMenuIndent="10px">
             <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
             <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
             <DynamicMenuStyle BackColor="#F7F6F3" />
             <DynamicSelectedStyle BackColor="#5D7B9D" />
             <Items>
-                <asp:MenuItem Text="PC" Value="PC" NavigateUrl="~/PC.aspx"></asp:MenuItem>
-                <asp:MenuItem Text ="PS3" Value="PS3"></asp:MenuItem>
+                <asp:MenuItem Text="PC" Value="PC"></asp:MenuItem>
+                <asp:MenuItem Text ="PS3" Value="PS3" ></asp:MenuItem>
                 <asp:MenuItem Text ="Xbox" Value="Xbox"></asp:MenuItem>
                 <asp:MenuItem Text="Wii" Value="Wii"></asp:MenuItem>
                 <asp:MenuItem Text="WiiU" Value="WiiU"></asp:MenuItem>
@@ -36,6 +36,7 @@
         </asp:Menu> 
      </div>    
             <div id="content">
+                <iframe id="ifr" runat="server" src="PC.aspx"/>
             </div>
     </form>
 </body>
