@@ -24,8 +24,7 @@
                 <asp:MenuItem Text ="Xbox" Value="Xbox"></asp:MenuItem>
                 <asp:MenuItem Text="Wii" Value="Wii"></asp:MenuItem>
                 <asp:MenuItem Text="WiiU" Value="WiiU"></asp:MenuItem>
-                <asp:MenuItem Text="PS Vita" Value="PS Vita"></asp:MenuItem>
-                
+                <asp:MenuItem Text="PS Vita" Value="PSVita"></asp:MenuItem>                
                 <asp:MenuItem Text="Kontakt" Value="Kontakt"></asp:MenuItem>
                 <asp:MenuItem Text="Impressum" Value="Impressum"></asp:MenuItem>
                 

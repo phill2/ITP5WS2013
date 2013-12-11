@@ -58,10 +58,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.aspx" />
+    <Content Include="Kontakt.aspx" />
     <Content Include="PC.aspx" />
     <Content Include="PS3.aspx" />
+    <Content Include="PSVita.aspx" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
+    <Content Include="Wii.aspx" />
+    <Content Include="WiiU.aspx" />
+    <Content Include="Xbox.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="index.aspx.cs">
@@ -70,6 +75,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontakt.aspx.cs">
+      <DependentUpon>Kontakt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kontakt.aspx.designer.cs">
+      <DependentUpon>Kontakt.aspx</DependentUpon>
     </Compile>
     <Compile Include="PC.aspx.cs">
       <DependentUpon>PC.aspx</DependentUpon>
@@ -85,6 +97,34 @@
     </Compile>
     <Compile Include="PS3.aspx.designer.cs">
       <DependentUpon>PS3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PSVita.aspx.cs">
+      <DependentUpon>PSVita.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PSVita.aspx.designer.cs">
+      <DependentUpon>PSVita.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wii.aspx.cs">
+      <DependentUpon>Wii.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wii.aspx.designer.cs">
+      <DependentUpon>Wii.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WiiU.aspx.cs">
+      <DependentUpon>WiiU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WiiU.aspx.designer.cs">
+      <DependentUpon>WiiU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Xbox.aspx.cs">
+      <DependentUpon>Xbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xbox.aspx.designer.cs">
+      <DependentUpon>Xbox.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
