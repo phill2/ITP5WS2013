@@ -31,6 +31,11 @@ border:medium solid black;
 margin-left:35px;
 }
 
+#register {
+    position:absolute;
+    left:95%;
+}
+
 #ifr
 {
     border:none;

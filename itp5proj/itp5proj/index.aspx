@@ -37,6 +37,9 @@
             <div id="content">
                 <iframe id="ifr" runat="server" src="PC.aspx"/>
             </div>
+        <div id="register">
+
+        </div>
     </form>
 </body>
 </html>

@@ -9,18 +9,18 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    Vorname: <input type="text" name="vname" size="30" style="margin-left: 57px"/><br />
+    Vorname: <asp:TextBox ID="vname" width="30" style="margin-left: 57px" runat="server"/><br />
         <br />
-    Nachname: <input type="text" name="nname" size="30" style="margin-left: 47px"/><br />
+    Nachname: <asp:TextBox ID="nname" width="30" style="margin-left: 47px" runat="server"/><br />
         <br />
-    E-Mail-Adresse: <input type="email" name="mail" size="30" style="margin-left: 13px" /><br />
+    E-Mail-Adresse: <asp:TextBox ID="mail" width="30" style="margin-left: 13px" runat="server"/><br />
         <br />
     Beschreibung: 
         <br />
-        <asp:TextBox TextMode="MultiLine" runat="server" size="50" Height="95px" style="margin-left: 117px" Width="256px" />
+        <asp:TextBox TextMode="MultiLine" ID="message" runat="server" size="50" Height="95px" style="margin-left: 117px" Width="256px" />
         <br />
         <br />
-    <asp:Button ID="submit" runat="server" Text="Senden" Width="89px" style="margin-left: 96px" />
+    <asp:Button ID="submit" runat="server" Text="Senden" OnClick="submit_Click" Width="89px" style="margin-left: 96px" />
     <asp:Button ID="reset" runat="server" Text="Zurücksetzen" OnClick="reset_Click" style="margin-left: 110px" />
     </form>
 </body>

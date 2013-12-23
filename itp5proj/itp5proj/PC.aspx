@@ -9,14 +9,14 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div><p>
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-         no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-        sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-        At vero eos et accusam et justo duo dolores et ea rebum. 
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    </p></div>
+    <div>
+        <asp:DataList ID="posts" runat="server">
+            <ItemTemplate>
+                <asp:Label runat="server"><%#DataBinder.Eval(Container.DataItem, "title")%><br /><%#DataBinder.Eval(Container.DataItem, "description")%></asp:Label>
+                <asp:Image ImageAlign="Right" runat="server" Height="200px" Width="100px" ImageUrl=<%#DataBinder.Eval(Container.DataItem, "cover")%> /><!--Linie nicht beachten, es soll so sein-->
+            </ItemTemplate>
+        </asp:DataList>
+    </div>
     </form>
 </body>
 </html>
