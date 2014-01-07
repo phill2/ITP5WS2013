@@ -27,7 +27,7 @@
                 <asp:MenuItem Text="PS Vita" Value="PSVita"></asp:MenuItem>                
                 <asp:MenuItem Text="Kontakt" Value="Kontakt"></asp:MenuItem>
                 <asp:MenuItem Text="Impressum" Value="Impressum"></asp:MenuItem>
-                
+                <asp:MenuItem Text="Registrieren" Value="Register"></asp:MenuItem>
             </Items>
             <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
             <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
@@ -37,8 +37,11 @@
             <div id="content">
                 <iframe id="ifr" runat="server" src="PC.aspx"/>
             </div>
-        <div id="register">
-
+        <div id="login">
+            <asp:Label ID="logintext" Visible="false" Text="Invalid login data" runat="server"/><br />
+            Username:<asp:TextBox ID="lname" runat="server" /><br />
+            Password:<asp:TextBox ID="pwd" runat="server" /><br />
+            <asp:Button Text="Login" runat="server" />
         </div>
     </form>
 </body>

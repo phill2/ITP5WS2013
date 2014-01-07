@@ -31,9 +31,9 @@ border:medium solid black;
 margin-left:35px;
 }
 
-#register {
+#login {
     position:absolute;
-    left:95%;
+    left:50%;
 }
 
 #ifr

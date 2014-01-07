@@ -62,6 +62,7 @@
     <Content Include="PC.aspx" />
     <Content Include="PS3.aspx" />
     <Content Include="PSVita.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
     <Content Include="Wii.aspx" />
@@ -104,6 +105,13 @@
     </Compile>
     <Compile Include="PSVita.aspx.designer.cs">
       <DependentUpon>PSVita.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Wii.aspx.cs">
       <DependentUpon>Wii.aspx</DependentUpon>
