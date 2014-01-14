@@ -29,7 +29,7 @@ namespace itp5proj
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            String conn = WebConfigurationManager.ConnectionStrings["MainDB"].ConnectionString;
+            String conn = WebConfigurationManager.ConnectionStrings["mobile"].ConnectionString;
             using (SqlConnection myConnection = new SqlConnection(conn))
             {
                 myConnection.Open();
@@ -38,9 +38,9 @@ namespace itp5proj
                 comm.Parameters.Add(new SqlParameter("pwd", pwd.Text));
                 SqlDataReader reader = comm.ExecuteReader();
                 reader.Read();
-                if (reader.GetString(0) == lname.Text)
+                if (reader.GetString(1) == lname.Text)
                 {
-                    logintext.Text = "Logged in as " + reader.GetString(0);
+                    logintext.Text = "Logged in as " + reader.GetString(1);
                     logintext.Visible = true;
                     LogoutKlick.Visible = true;
                     

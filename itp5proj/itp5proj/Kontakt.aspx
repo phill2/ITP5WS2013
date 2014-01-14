@@ -9,11 +9,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    Vorname: <asp:TextBox ID="vname" width="30" style="margin-left: 57px" runat="server"/><br />
+    Vorname: <asp:TextBox ID="vname" width="100" style="margin-left: 57px" runat="server"/><br />
         <br />
-    Nachname: <asp:TextBox ID="nname" width="30" style="margin-left: 47px" runat="server"/><br />
+    Nachname: <asp:TextBox ID="nname" width="100" style="margin-left: 47px" runat="server"/><br />
         <br />
-    E-Mail-Adresse: <asp:TextBox ID="mail" width="30" style="margin-left: 13px" runat="server"/><br />
+    E-Mail-Adresse: <asp:TextBox ID="mail" width="100" style="margin-left: 13px" runat="server"/><br />
         <br />
     Beschreibung: 
         <br />

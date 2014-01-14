@@ -37,7 +37,7 @@
                 <iframe id="ifr" runat="server" src="PC.aspx"/>
             </div>
         <div id="login">
-            <asp:Label ID="logintext" Visible="false" Text="" runat="server"/><asp:LinkButton ID="LogoutKlick" Visible="false" Text="Logout" OnClick="LogoutKlick_Click" runat="server"/><br />
+            <asp:Label ID="logintext" Visible="false" Text="" runat="server"/> <asp:LinkButton ID="LogoutKlick" Visible="false" Text="Logout" OnClick="LogoutKlick_Click" runat="server"/><br />
             Username:<asp:TextBox ID="lname" runat="server" /><br />
             Password:<asp:TextBox ID="pwd" TextMode="Password" runat="server" /><br />
             <asp:Button ID="Button1" Text="Login" OnClick="Button1_Click" runat="server" />

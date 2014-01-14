@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Comments.aspx" />
     <Content Include="index.aspx" />
     <Content Include="Kontakt.aspx" />
     <Content Include="PC.aspx" />
@@ -72,6 +73,13 @@
     <Content Include="Xbox.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comments.aspx.cs">
+      <DependentUpon>Comments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comments.aspx.designer.cs">
+      <DependentUpon>Comments.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -21,7 +21,7 @@
                     <tr>
                         <td>
                             <div class="dispcomm">
-
+                                <!--<iframe class="ifrc" runat="server" src="Comments.aspx" />-->
                             </div>
                         </td>
                     </tr>
@@ -29,8 +29,8 @@
         </asp:DataList>
             <tr>
                 <td>Choose game to comment on: <asp:DropDownList ID="ddl" runat="server"/><br />
-        <asp:TextBox ID="commt" Width="500px" Rows="7" TextMode="MultiLine" runat="server"/><br />
-        <asp:Button ID="scom" Text="Submit comment" OnClick="scom_Click" runat="server" /></td>
+                    <asp:TextBox ID="commt" Width="500px" Rows="7" TextMode="MultiLine" runat="server"/><br />
+                    <asp:Button ID="scom" Text="Submit comment" Enabled="false" OnClick="scom_Click" runat="server" /><asp:Label ID="clo" Text="You have to be logged in to comment!" runat="server"/></td>
             </tr>
         </table>
     </div>

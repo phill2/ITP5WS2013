@@ -13,7 +13,7 @@ namespace itp5proj
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            String conn = WebConfigurationManager.ConnectionStrings["MainDB"].ConnectionString;
+            String conn = WebConfigurationManager.ConnectionStrings["mobile"].ConnectionString;
             using (SqlConnection myConnection = new SqlConnection(conn))
             {
                 myConnection.Open();
@@ -25,27 +25,34 @@ namespace itp5proj
                 reader = comm.ExecuteReader();
                 while(reader.Read()){
                     ddl.Items.Add(reader.GetString(1));
-                    ddl.SelectedItem.Value = Convert.ToString(reader.GetInt32(0));
+                    ddl.SelectedItem.Value = reader.GetInt32(0).ToString();
                 }
                 reader.Close();
                 myConnection.Close();
+            }
+            HttpCookie nc = Request.Cookies["logincookie"];
+            if (nc != null)
+            {
+                scom.Enabled = true;
+                clo.Visible = false;
             }
         }
 
         protected void scom_Click(object sender, EventArgs e)
         {
-            String conn = WebConfigurationManager.ConnectionStrings["MainDB"].ConnectionString;
+            String conn = WebConfigurationManager.ConnectionStrings["mobile"].ConnectionString;
             using (SqlConnection myConnection = new SqlConnection(conn))
             {
                 myConnection.Open();
                 SqlCommand comm = new SqlCommand("INSERT INTO Comments (id, body, uid, gid) VALUES (@id, @body, @uid, @gid)", myConnection);
-                SqlDataReader rd = new SqlCommand("SELECT sum(id) FROM Comments", myConnection).ExecuteReader();
+                SqlDataReader rd = new SqlCommand("SELECT count(id) FROM Comments", myConnection).ExecuteReader();
                 rd.Read();
                 comm.Parameters.Add(new SqlParameter("id", rd.GetInt32(0)+1));
                 comm.Parameters.Add(new SqlParameter("body", commt.Text));
-                comm.Parameters.Add(new SqlParameter("uid", Convert.ToInt32(Request.Cookies["idval"].Value)));
+                comm.Parameters.Add(new SqlParameter("uid", Request.Cookies["idval"].Value));
                 comm.Parameters.Add(new SqlParameter("gid", ddl.SelectedItem.Value));
                 rd.Close();
+                comm.ExecuteNonQuery();
                 myConnection.Close();
             }
         }
