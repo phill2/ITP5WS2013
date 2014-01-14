@@ -1,0 +1,46 @@
+﻿body {
+}
+
+#title {
+margin-top:50px;
+border:solid;
+border-color:black;
+font-size:x-large;
+font-style:italic;
+padding-left:40px;
+}
+
+
+#navigation {
+float:left;
+margin-top:50px;
+width:10%;
+border:solid;
+border-color:black;
+}
+
+
+
+#content {
+float:right;
+margin-top:25px;
+width:80%;
+height:350px;
+margin-right:50px;
+border:medium solid black;
+margin-left:35px;
+}
+
+#login {
+    position:absolute;
+    left:90%;
+    top:0%;
+    font: 12px, arial;
+}
+
+#ifr
+{
+    border:none;
+    width:98%;
+    height:95%;
+}

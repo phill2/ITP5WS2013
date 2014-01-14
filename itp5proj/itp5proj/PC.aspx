@@ -5,17 +5,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div class="games">
+        <table border="0">
         <asp:DataList ID="posts" runat="server">
             <ItemTemplate>
-                <asp:Label runat="server"><%#DataBinder.Eval(Container.DataItem, "title")%><br /><%#DataBinder.Eval(Container.DataItem, "description")%></asp:Label>
-                <asp:Image ImageAlign="Right" runat="server" Height="200px" Width="100px" ImageUrl=<%#DataBinder.Eval(Container.DataItem, "cover")%> /><!--Linie nicht beachten, es soll so sein-->
+                    <tr>
+                        <td><asp:Label runat="server"><%#DataBinder.Eval(Container.DataItem, "title")%><br /><%#DataBinder.Eval(Container.DataItem, "description")%></asp:Label></td>
+                        <td><asp:Image runat="server" Height="200px" Width="100px" ImageUrl=<%#DataBinder.Eval(Container.DataItem, "cover")%> /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="dispcomm">
+
+                            </div>
+                        </td>
+                    </tr>
             </ItemTemplate>
         </asp:DataList>
+            <tr>
+                <td>Choose game to comment on: <asp:DropDownList ID="ddl" runat="server"/><br />
+        <asp:TextBox ID="commt" Width="500px" Rows="7" TextMode="MultiLine" runat="server"/><br />
+        <asp:Button ID="scom" Text="Submit comment" OnClick="scom_Click" runat="server" /></td>
+            </tr>
+        </table>
     </div>
     </form>
 </body>

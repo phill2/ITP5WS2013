@@ -1,4 +1,6 @@
 ﻿body {
+background-color:#CCCCFF;
+
 }
 
 #title {
@@ -6,39 +8,60 @@ margin-top:50px;
 border:solid;
 border-color:black;
 font-size:x-large;
-font-style:italic;
-padding-left:40px;
+font-family:cursive;
+padding-left:35px;
+background-color:#9999FF;
+
 }
 
+h1
+{
+color:#990000;
+margin-left:80px;
+
+}
 
 #navigation {
 float:left;
-margin-top:50px;
+margin-top:25px;
 width:10%;
 border:solid;
 border-color:black;
+margin-left:10px;
+
 }
-
-
 
 #content {
 float:right;
 margin-top:25px;
-width:80%;
+width:85%;
 height:350px;
-margin-right:50px;
 border:medium solid black;
-margin-left:35px;
+margin-left:30px;
 }
 
 #login {
     position:absolute;
-    left:50%;
+    left:90%;
+    top:0%;
+    font: 12px, arial;
 }
 
 #ifr
 {
-    border:none;
-    width:98%;
-    height:95%;
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    width:99%;
+    height:100%;
+}
+
+.games {
+    position:absolute;
+    top:0%;
+    overflow:auto;
+}
+
+.dispcomm {
+    overflow:auto;
 }

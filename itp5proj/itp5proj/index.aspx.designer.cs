@@ -49,6 +49,15 @@ namespace itp5proj {
         protected global::System.Web.UI.WebControls.Label logintext;
         
         /// <summary>
+        /// LogoutKlick control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LogoutKlick;
+        
+        /// <summary>
         /// lname control.
         /// </summary>
         /// <remarks>
@@ -65,5 +74,14 @@ namespace itp5proj {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox pwd;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

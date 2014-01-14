@@ -10,10 +10,10 @@
     <form id="form1" runat="server">
     <div>
     To register, please enter your desired Username and Password as well as your E-mail Address:<br />
-        Enter Username:<asp:TextBox ID="user" runat="server"/>
-        Enter password:<asp:TextBox ID="pwd" runat="server"/>
-        Enter Email-Address:<asp:TextBox ID="email" runat="server"/>
-        <asp:Button OnClick="Unnamed_Click" runat="server"/>
+        Enter Username:<asp:TextBox ID="user" runat="server"/><br />
+        Enter password:<asp:TextBox ID="pwd" runat="server"/><br />
+        Enter Email-Address:<asp:TextBox ID="email" runat="server"/><br />
+        <asp:Button OnClick="Unnamed_Click" Text="Submit" runat="server"/>
     </div>
     </form>
 </body>

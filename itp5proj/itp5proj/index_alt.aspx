@@ -11,11 +11,12 @@
 <body>
     <form id="form1" runat="server">
     <div id="title">
-        <h1>ITP 5 by Philipp Langer & Sergej Onishchuk</h1></div>
+        <h1>ITP 5 ASP.NET Homepage by Philipp Langer & Sergej Onishchuk</h1></div>
     <div id="navigation">
-        <asp:Menu ID="Menu" OnMenuItemClick="Item_Click" runat="server"  StaticDisplayLevels = "3" BackColor="#9999FF" DynamicHorizontalOffset="2" Font-Names="cursive" Font-Size="0.9em" ForeColor="#990000" StaticSubMenuIndent="10px" Font-Bold="True" Height="350px" RenderingMode="Table">
+        <asp:Menu ID="Menu" OnMenuItemClick="Item_Click" runat="server"  StaticDisplayLevels = "3" BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#7C6F57" StaticSubMenuIndent="10px">
             <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
-            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" BackColor="#9999FF" />
+            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <DynamicMenuStyle BackColor="#F7F6F3" />
             <DynamicSelectedStyle BackColor="#5D7B9D" />
             <Items>
                 <asp:MenuItem Text="PC" Value="PC"></asp:MenuItem>
@@ -39,7 +40,7 @@
         <div id="login">
             <asp:Label ID="logintext" Visible="false" Text="" runat="server"/><asp:LinkButton ID="LogoutKlick" Visible="false" Text="Logout" OnClick="LogoutKlick_Click" runat="server"/><br />
             Username:<asp:TextBox ID="lname" runat="server" /><br />
-            Password:<asp:TextBox ID="pwd" TextMode="Password" runat="server" /><br />
+            Password:<asp:TextBox ID="pwd" runat="server" /><br />
             <asp:Button ID="Button1" Text="Login" OnClick="Button1_Click" runat="server" />
         </div>
     </form>
