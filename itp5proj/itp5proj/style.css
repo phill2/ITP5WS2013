@@ -58,7 +58,11 @@ margin-left:30px;
 
 #ifrc
 {
-
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    width:99%;
+    height:100%;
 }
 
 .games {
@@ -70,3 +74,4 @@ margin-left:30px;
 .dispcomm {
     overflow:auto;
 }
+

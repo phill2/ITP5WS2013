@@ -35,6 +35,7 @@
      </div>    
             <div id="content">
                 <iframe id="ifr" runat="server" src="PC.aspx"/>
+                <iframe id="ifrc" runat="server" src="Comments.aspx" />
             </div>
         <div id="login">
             <asp:Label ID="logintext" Visible="false" Text="" runat="server"/> <asp:LinkButton ID="LogoutKlick" Visible="false" Text="Logout" OnClick="LogoutKlick_Click" runat="server"/><br />
