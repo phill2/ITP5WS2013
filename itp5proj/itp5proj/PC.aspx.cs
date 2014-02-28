@@ -23,7 +23,8 @@ namespace itp5proj
                 posts.DataBind();
                 reader.Close();
                 reader = comm.ExecuteReader();
-                while(reader.Read()){
+                while (reader.Read())
+                {
                     ddl.Items.Add(reader.GetString(1));
                     ddl.SelectedItem.Value = reader.GetInt32(0).ToString();
                 }
@@ -47,7 +48,7 @@ namespace itp5proj
                 SqlCommand comm = new SqlCommand("INSERT INTO Comments (id, body, uid, gid) VALUES (@id, @body, @uid, @gid)", myConnection);
                 SqlDataReader rd = new SqlCommand("SELECT count(id) FROM Comments", myConnection).ExecuteReader();
                 rd.Read();
-                comm.Parameters.Add(new SqlParameter("id", rd.GetInt32(0)+1));
+                comm.Parameters.Add(new SqlParameter("id", rd.GetInt32(0) + 1));
                 comm.Parameters.Add(new SqlParameter("body", commt.Text));
                 comm.Parameters.Add(new SqlParameter("uid", Request.Cookies["idval"].Value));
                 comm.Parameters.Add(new SqlParameter("gid", ddl.SelectedItem.Value));

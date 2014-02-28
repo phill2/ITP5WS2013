@@ -3,11 +3,6 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title></title>
-</head>
 <body>
     <form id="form1" runat="server">
     <div class="games">
@@ -15,8 +10,8 @@
         <asp:DataList ID="posts" runat="server">
             <ItemTemplate>
                     <tr>
-                        <td><asp:Label runat="server"><%#DataBinder.Eval(Container.DataItem, "title")%><br /><%#DataBinder.Eval(Container.DataItem, "description")%></asp:Label></td>
-                        <td><asp:Image runat="server" Height="200px" Width="100px" ImageUrl=<%#DataBinder.Eval(Container.DataItem, "cover")%> /></td>
+                        <td><asp:Label ID="Label1" runat="server"><%#DataBinder.Eval(Container.DataItem, "title")%><br /><%#DataBinder.Eval(Container.DataItem, "description")%></asp:Label></td>
+                        <td><asp:Image ID="Image1" runat="server" Height="200px" Width="100px" ImageUrl=<%#DataBinder.Eval(Container.DataItem, "cover")%> /></td>
                     </tr>
                     <tr>
                         <td>

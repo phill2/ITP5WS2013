@@ -17,6 +17,7 @@ namespace itp5proj
             using (SqlConnection myConnection = new SqlConnection(conn))
             {
                 myConnection.Open();
+                
                 SqlCommand comm = new SqlCommand("SELECT body, title FROM Comments JOIN Games ON Comments.gid=Games.id", myConnection);
                 SqlDataReader reader = comm.ExecuteReader();
                 commies.DataSource = reader;
