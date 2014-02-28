@@ -31,28 +31,19 @@
             </div> 
             <div class="row-fluid"> 
               <div class="span2" id="sidebar">  
-                <asp:Menu ID="Menu" OnMenuItemClick="Item_Click" runat="server"  StaticDisplayLevels = "3" BackColor="#9999FF" DynamicHorizontalOffset="2" Font-Names="cursive" Font-Size="0.9em" ForeColor="#990000" StaticSubMenuIndent="10px" Font-Bold="True" Height="350px" RenderingMode="Table">
-            <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
-            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" BackColor="#9999FF" />
-            <DynamicSelectedStyle BackColor="#5D7B9D" />
-            <Items>
-                <asp:MenuItem Text="PC" Value="PC"></asp:MenuItem>
-                <asp:MenuItem Text ="PS3" Value="PS3" ></asp:MenuItem>
-                <asp:MenuItem Text ="Xbox" Value="Xbox"></asp:MenuItem>
-                <asp:MenuItem Text="Wii" Value="Wii"></asp:MenuItem>
-                <asp:MenuItem Text="WiiU" Value="WiiU"></asp:MenuItem>
-                <asp:MenuItem Text="PS Vita" Value="PSVita"></asp:MenuItem>                
-                <asp:MenuItem Text="Kontakt" Value="Kontakt"></asp:MenuItem>
-                <asp:MenuItem Text="Impressum" Value="Impressum"></asp:MenuItem>
-                <asp:MenuItem Text="Registrieren" Value="Register"></asp:MenuItem>
-            </Items>
-            <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
-            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-            <StaticSelectedStyle BackColor="#5D7B9D" />
-        </asp:Menu>
+                <ul class="nav nav-pills nav-stacked"> 
+                    <li class="active"><a href="PC.aspx">PC</a></li> 
+                    <li><a href="PS3.aspx">PS3</a></li>  
+                    <li><a href="Xbox.aspx">Xbox</a></li>
+                    <li><a href="PSVita.aspx">PS-Vita</a></li> 
+                    <li><a href="Wii.aspx">Wii</a></li>
+                    <li><a href="WiiU.aspx">WiiU</a></li>   
+                    <li><a href="Kontakt.aspx">Kontakt</a></li> 
+              </ul>
               </div> 
               <div class="span10"> 
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    
                 </asp:ContentPlaceHolder> 
               </div> 
             </div>

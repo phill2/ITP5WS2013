@@ -1,10 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PC.aspx.cs" Inherits="itp5proj.PC" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/BootstrapASP.Master" CodeBehind="PC.aspx.cs" Inherits="itp5proj.PC" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<body>
-    <form id="form1" runat="server">
+   <title>Index</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="games">
         <table border="0">
         <asp:DataList ID="posts" runat="server">
@@ -29,6 +28,4 @@
             </tr>
         </table>
     </div>
-    </form>
-</body>
-</html>
+    </asp:Content>

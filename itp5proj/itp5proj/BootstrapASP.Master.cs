@@ -33,7 +33,7 @@ namespace itp5proj
             protected void Item_Click(object sender, EventArgs e)
             {
                 //ifr.Src = Menu.SelectedValue + ".aspx";
-               // ContentPlaceHolder1.
+                
             }
 
             protected void Button1_Click(object sender, EventArgs e)
@@ -63,10 +63,10 @@ namespace itp5proj
                         Response.Cookies.Add(ic);
                         if (reader.GetString(2) == "admin")
                         {
-                            MenuItem mi = new MenuItem();
-                            mi.Text = "Admin Panel";
-                            mi.Value = "Admin";
-                            Menu.Items.Add(mi);
+                            //MenuItem mi = new MenuItem();
+                            //mi.Text = "Admin Panel";
+                            //mi.Value = "Admin";
+                            //Menu.Items.Add(mi);
                         }
                     }
                     else
