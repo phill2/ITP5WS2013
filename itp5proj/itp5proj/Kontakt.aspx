@@ -1,14 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Kontakt.aspx.cs" Inherits="itp5proj.Kontakt" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/BootstrapASP.Master" CodeBehind="Kontakt.aspx.cs" Inherits="itp5proj.Kontakt" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-<!DOCTYPE html>
+   <title>Index</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
     Vorname: <asp:TextBox ID="vname" width="100" style="margin-left: 57px" runat="server"/><br />
         <br />
     Nachname: <asp:TextBox ID="nname" width="100" style="margin-left: 47px" runat="server"/><br />
@@ -22,6 +18,4 @@
         <br />
     <asp:Button ID="submit" runat="server" Text="Senden" OnClick="submit_Click" Width="89px" style="margin-left: 96px" />
     <asp:Button ID="reset" runat="server" Text="Zurücksetzen" OnClick="reset_Click" style="margin-left: 110px" />
-    </form>
-</body>
-</html>
+    </asp:Content>

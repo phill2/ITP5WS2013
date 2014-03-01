@@ -58,7 +58,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="admin.aspx" />
+    <Content Include="upanel.aspx" />
     <Content Include="Comments.aspx" />
     <Content Include="css\bootstrap-responsive.css" />
     <Content Include="css\bootstrap-responsive.min.css" />
@@ -86,12 +86,12 @@
     <Content Include="Xbox.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin.aspx.cs">
-      <DependentUpon>admin.aspx</DependentUpon>
+    <Compile Include="upanel.aspx.cs">
+      <DependentUpon>upanel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin.aspx.designer.cs">
-      <DependentUpon>admin.aspx</DependentUpon>
+    <Compile Include="upanel.aspx.designer.cs">
+      <DependentUpon>upanel.aspx</DependentUpon>
     </Compile>
     <Compile Include="BootstrapASP.Master.cs">
       <DependentUpon>BootstrapASP.Master</DependentUpon>
@@ -108,8 +108,6 @@
       <DependentUpon>Comments.aspx</DependentUpon>
     </Compile>
     <Compile Include="database\dbs.cs" />
-    <Compile Include="database\model.cs" />
-    <Compile Include="database\nstr.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

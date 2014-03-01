@@ -31,14 +31,16 @@
             </div> 
             <div class="row-fluid"> 
               <div class="span2" id="sidebar">  
-                <ul class="nav nav-pills nav-stacked"> 
-                    <li class="active"><a href="PC.aspx">PC</a></li> 
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="index.aspx">News</a></li>
+                    <li><a href="PC.aspx">PC</a></li> 
                     <li><a href="PS3.aspx">PS3</a></li>  
                     <li><a href="Xbox.aspx">Xbox</a></li>
                     <li><a href="PSVita.aspx">PS-Vita</a></li> 
                     <li><a href="Wii.aspx">Wii</a></li>
                     <li><a href="WiiU.aspx">WiiU</a></li>   
-                    <li><a href="Kontakt.aspx">Kontakt</a></li> 
+                    <li><a href="Kontakt.aspx">Kontakt</a></li>
+                    <li><a href="upanel.aspx">User Panel</a></li>
               </ul>
               </div> 
               <div class="span10"> 

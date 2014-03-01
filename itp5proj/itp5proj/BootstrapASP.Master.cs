@@ -24,7 +24,7 @@ namespace itp5proj
                 HttpCookie nc = Request.Cookies["logincookie"];
                 if (nc != null)
                 {
-                    logintext.Text = "Logged in as " + nc.Value;
+                    logintext.Text = "Logged in as " + nc["nickname"];
                     logintext.Visible = true;
                     LogoutKlick.Visible = true;
                 }
@@ -54,20 +54,11 @@ namespace itp5proj
                         LogoutKlick.Visible = true;
 
                         HttpCookie nc = new HttpCookie("logincookie");
-                        nc.Value = reader.GetString(1);
+                        nc.Values.Add("nickname", reader.GetString(1));
+                        nc.Values.Add("id", reader.GetInt32(0).ToString());
+                        nc.Values.Add("type", reader.GetString(2));
                         nc.Expires = DateTime.Now.AddMinutes(15);
                         Response.Cookies.Add(nc);
-                        HttpCookie ic = new HttpCookie("idval");
-                        ic.Value = reader.GetInt32(0).ToString();
-                        nc.Expires = DateTime.Now.AddMinutes(15);
-                        Response.Cookies.Add(ic);
-                        if (reader.GetString(2) == "admin")
-                        {
-                            //MenuItem mi = new MenuItem();
-                            //mi.Text = "Admin Panel";
-                            //mi.Value = "Admin";
-                            //Menu.Items.Add(mi);
-                        }
                     }
                     else
                     {
@@ -83,10 +74,7 @@ namespace itp5proj
             {
                 LogoutKlick.Visible = false;
                 HttpCookie nc = Request.Cookies["logincookie"];
-                nc.Expires = DateTime.Now;
-                Response.Cookies.Add(nc);
-                nc = Request.Cookies["idval"];
-                nc.Expires = DateTime.Now;
+                nc.Expires = DateTime.Now.AddDays(-1d);
                 Response.Cookies.Add(nc);
                 logintext.Visible = false;
 
