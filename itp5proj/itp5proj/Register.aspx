@@ -10,6 +10,7 @@
         Enter Username:<asp:TextBox ID="user" runat="server"/><br />
         Enter password:<asp:TextBox ID="pwd" TextMode="Password" runat="server"/><br />
         Enter Email-Address:<asp:TextBox ID="email" runat="server"/><br />
-        <asp:Button OnClick="Unnamed_Click" Text="Submit" runat="server"/>
+        <asp:Button OnClick="Unnamed_Click" Text="Submit" runat="server"/><br />
+        <asp:Label ID="warn" Visible="false" runat="server"/>
     </div>
     </asp:Content>

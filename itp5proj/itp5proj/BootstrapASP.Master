@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BootstrapASP.master.cs" Inherits="itp5proj.BootstrapASP" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BootstrapASP.master.cs" Inherits="itp5proj.BootstrapASP"  %>
 
 <!DOCTYPE html>
 
@@ -36,8 +36,7 @@
                     <li><a href="PC.aspx">PC</a></li> 
                     <li><a href="PS3.aspx">PS3</a></li>  
                     <li><a href="Xbox.aspx">Xbox</a></li>
-                    <li><a href="PSVita.aspx">PS-Vita</a></li> 
-                    <li><a href="Wii.aspx">Wii</a></li>
+                    <li><a href="PSVita.aspx">PS-Vita</a></li>
                     <li><a href="WiiU.aspx">WiiU</a></li>   
                     <li><a href="Kontakt.aspx">Kontakt</a></li>
                     <li><a href="upanel.aspx">User Panel</a></li>

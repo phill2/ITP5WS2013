@@ -14,25 +14,36 @@ namespace itp5proj
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void Unnamed_Click(object sender, EventArgs e)
         {
-            String conn = WebConfigurationManager.ConnectionStrings["mobile"].ConnectionString;
-            using (SqlConnection myConnection = new SqlConnection(conn))
+            UserDB ins=new UserDB();
+            List<String> ls = ins.Read_Users();
+            for (int i = 1; i < ls.Count;i++ )
             {
-                myConnection.Open();
-                SqlCommand comm = new SqlCommand("INSERT INTO Users (id, username, password, acctype, email) VALUES (@id, @un, @pwd, 'regular', @mail)", myConnection);
-                SqlDataReader rd = new SqlCommand("SELECT count(id) FROM Users", myConnection).ExecuteReader();
-                rd.Read();
-                comm.Parameters.Add(new SqlParameter("id", (rd.GetInt32(0)+1)));
-                comm.Parameters.Add(new SqlParameter("un", user.Text));
-                comm.Parameters.Add(new SqlParameter("pwd", pwd.Text));
-                comm.Parameters.Add(new SqlParameter("mail", email.Text));
-                rd.Close();
-                comm.ExecuteNonQuery();
-                myConnection.Close();
+                if (user.Text == ls[i].Split(((char)007))[0] || email.Text == ls[i].Split(((char)007))[1])
+                {
+                    if (user.Text == ls[i].Split(((char)007))[0])
+                    {
+                        warn.Text = "Chosen username already in use. Please choose a different username.";
+                    }
+                    else
+                    {
+                        warn.Text = "Chosen email already in use. Please choose a different email.";
+                    }
+                    warn.Visible = true;
+                    break;
+                }
+                else if(i + 1 == ls.Count)
+                {
+                    ls.Add(user.Text);
+                    crypt c = new crypt();
+                    ls.Add(c.GetMd5Hash(pwd.Text));
+                    ls.Add(email.Text);
+                    ins.Create_New_User(ls);
+                }
             }
         }
     }

@@ -59,7 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="upanel.aspx" />
-    <Content Include="Comments.aspx" />
     <Content Include="css\bootstrap-responsive.css" />
     <Content Include="css\bootstrap-responsive.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -81,11 +80,11 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Wii.aspx" />
     <Content Include="WiiU.aspx" />
     <Content Include="Xbox.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="crypt.cs" />
     <Compile Include="upanel.aspx.cs">
       <DependentUpon>upanel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -99,13 +98,6 @@
     </Compile>
     <Compile Include="BootstrapASP.Master.designer.cs">
       <DependentUpon>BootstrapASP.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Comments.aspx.cs">
-      <DependentUpon>Comments.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Comments.aspx.designer.cs">
-      <DependentUpon>Comments.aspx</DependentUpon>
     </Compile>
     <Compile Include="database\dbs.cs" />
     <Compile Include="index.aspx.cs">
@@ -151,13 +143,6 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Wii.aspx.cs">
-      <DependentUpon>Wii.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Wii.aspx.designer.cs">
-      <DependentUpon>Wii.aspx</DependentUpon>
-    </Compile>
     <Compile Include="WiiU.aspx.cs">
       <DependentUpon>WiiU.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -195,7 +180,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>22459</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:57385/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

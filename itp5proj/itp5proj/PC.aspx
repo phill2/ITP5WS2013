@@ -5,22 +5,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="games">
-        <table border="0">
-        <asp:DataList ID="posts" runat="server">
-            <ItemTemplate>
-                    <tr>
-                        <td><asp:Label ID="Label1" runat="server"><%#DataBinder.Eval(Container.DataItem, "title")%><br /><%#DataBinder.Eval(Container.DataItem, "description")%></asp:Label></td>
-                        <td><asp:Image ID="Image1" runat="server" Height="200px" Width="100px" ImageUrl=<%#DataBinder.Eval(Container.DataItem, "cover")%> /></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="dispcomm">
-                                <!--<iframe class="ifrc" runat="server" src="Comments.aspx" />-->
-                            </div>
-                        </td>
-                    </tr>
-            </ItemTemplate>
-        </asp:DataList>
+        <asp:Table ID="gc" BorderWidth="3" runat="server">
+        </asp:Table>
+        <table>
             <tr>
                 <td>Choose game to comment on: <asp:DropDownList ID="ddl" runat="server"/><br />
                     <asp:TextBox ID="commt" Width="500px" Rows="7" TextMode="MultiLine" runat="server"/><br />

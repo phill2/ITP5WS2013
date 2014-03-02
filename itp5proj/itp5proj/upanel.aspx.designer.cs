@@ -31,6 +31,42 @@ namespace itp5proj {
         protected global::System.Web.UI.WebControls.Panel reg;
         
         /// <summary>
+        /// cp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cp;
+        
+        /// <summary>
+        /// np control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox np;
+        
+        /// <summary>
+        /// npc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox npc;
+        
+        /// <summary>
+        /// warn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label warn;
+        
+        /// <summary>
         /// mod control.
         /// </summary>
         /// <remarks>

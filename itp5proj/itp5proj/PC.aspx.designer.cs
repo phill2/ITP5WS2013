@@ -13,13 +13,13 @@ namespace itp5proj {
     public partial class PC {
         
         /// <summary>
-        /// posts control.
+        /// gc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList posts;
+        protected global::System.Web.UI.WebControls.Table gc;
         
         /// <summary>
         /// ddl control.

@@ -7,16 +7,6 @@ using System.Web.UI.WebControls;
 
 namespace itp5proj
 {
-
-    using System;
-    using System.Collections.Generic;
-    using System.Data.SqlClient;
-    using System.Linq;
-    using System.Web;
-    using System.Web.Configuration;
-    using System.Web.UI;
-    using System.Web.UI.WebControls;
-
         public partial class BootstrapASP : System.Web.UI.MasterPage
         {
             protected void Page_Load(object sender, EventArgs e)
@@ -30,33 +20,22 @@ namespace itp5proj
                 }
             }
 
-            protected void Item_Click(object sender, EventArgs e)
+            protected void Button1_Click(object sender, EventArgs e)//Login
             {
-                //ifr.Src = Menu.SelectedValue + ".aspx";
+                UserDB ins=new UserDB();
+                crypt c = new crypt();
+                List<String> ret = ins.Read_Login(lname.Text, c.GetMd5Hash(pwd.Text));
                 
-            }
-
-            protected void Button1_Click(object sender, EventArgs e)
-            {
-                String conn = WebConfigurationManager.ConnectionStrings["mobile"].ConnectionString;
-                using (SqlConnection myConnection = new SqlConnection(conn))
-                {
-                    myConnection.Open();
-                    SqlCommand comm = new SqlCommand("SELECT id, username, acctype FROM Users WHERE username=@una AND password=@pwd", myConnection);
-                    comm.Parameters.Add(new SqlParameter("una", lname.Text));
-                    comm.Parameters.Add(new SqlParameter("pwd", pwd.Text));
-                    SqlDataReader reader = comm.ExecuteReader();
-                    reader.Read();
-                    if (reader.GetString(1) == lname.Text)
+                    if (ret.Count != 0)
                     {
-                        logintext.Text = "Logged in as " + reader.GetString(1);
+                        logintext.Text = "Logged in as " + ret[0].Split(((char)007))[1];
                         logintext.Visible = true;
                         LogoutKlick.Visible = true;
 
                         HttpCookie nc = new HttpCookie("logincookie");
-                        nc.Values.Add("nickname", reader.GetString(1));
-                        nc.Values.Add("id", reader.GetInt32(0).ToString());
-                        nc.Values.Add("type", reader.GetString(2));
+                        nc.Values.Add("nickname", ret[0].Split(((char)007))[1]);
+                        nc.Values.Add("id", ret[0].Split(((char)007))[0]);
+                        nc.Values.Add("type", ret[0].Split(((char)007))[2]);
                         nc.Expires = DateTime.Now.AddMinutes(15);
                         Response.Cookies.Add(nc);
                     }
@@ -65,19 +44,21 @@ namespace itp5proj
                         logintext.Text = "Invalid login data";
                         logintext.Visible = true;
                     }
-                    reader.Close();
-                    myConnection.Close();
                 }
-            }
 
             protected void LogoutKlick_Click(object sender, EventArgs e)
             {
                 LogoutKlick.Visible = false;
                 HttpCookie nc = Request.Cookies["logincookie"];
-                nc.Expires = DateTime.Now.AddDays(-1d);
+                try
+                {
+                    nc.Expires = DateTime.Now.AddDays(-1d);
+                }
+                catch (NullReferenceException) { }
                 Response.Cookies.Add(nc);
                 logintext.Visible = false;
 
             }
-        }
-    }
+       }
+}
+    
