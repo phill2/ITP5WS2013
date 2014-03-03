@@ -24,10 +24,10 @@ namespace itp5proj
         {
             MailMessage nm = new MailMessage();
             nm.From = new MailAddress(mail.Text);
-            nm.To.Add(new MailAddress("philipp.langer@google.com"));
+            nm.To.Add(new MailAddress("philipp.langer2@google.com"));
             nm.Subject = "Kontaktierung";
             nm.Body = "Message from " + vname.Text + " " + nname.Text + ": " + message.Text;
-            SmtpClient smtp = new SmtpClient();
+            SmtpClient smtp = new SmtpClient("smtp.technikum-wien.at");
             smtp.Send(nm);
         }
     }

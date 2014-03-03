@@ -85,7 +85,7 @@ namespace itp5proj
     {
         public void Create_New_User(List<String> pms)
         {
-            SqlCommand st = new SqlCommand("INSERT INTO Users (id, username, password, acctype, email) VALUES (@id, @un, @pwd, 'regular', @mail)");
+            SqlCommand st = new SqlCommand("INSERT INTO Users VALUES (@id, @un, @pwd, 'regular', @mail)");
             st.Parameters.Add(new SqlParameter("un", pms[0]));
             st.Parameters.Add(new SqlParameter("pwd", pms[1]));
             st.Parameters.Add(new SqlParameter("mail", pms[2]));

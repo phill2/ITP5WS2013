@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Web;
 using System.Web.Configuration;
@@ -38,11 +39,20 @@ namespace itp5proj
                 }
                 else if(i + 1 == ls.Count)
                 {
+                    ls = new List<String>();
                     ls.Add(user.Text);
                     crypt c = new crypt();
                     ls.Add(c.GetMd5Hash(pwd.Text));
                     ls.Add(email.Text);
                     ins.Create_New_User(ls);
+
+                    MailMessage nm = new MailMessage();
+                    nm.From = new MailAddress("philipp.langer2@google.com");
+                    nm.To.Add(new MailAddress(email.Text));
+                    nm.Subject = "Your new ITP5-Gaming-Website Account";
+                    nm.Body = "Your new account has been created. Your Username is " + user.Text + " and your password is " + pwd.Text + "<br/> Greetings,";
+                    SmtpClient smtp = new SmtpClient("smtp.technikum-wien.at");
+                    smtp.Send(nm);
                 }
             }
         }
