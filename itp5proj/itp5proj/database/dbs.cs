@@ -218,4 +218,32 @@ namespace itp5proj
         {
         }
     }
+
+    public class ScoresDB
+    {
+        public void Create_New_Score(List<String> pms)
+        {
+            SqlCommand st = new SqlCommand("INSERT INTO Scores VALUES(@id, @score, @uid, @gid)");
+            st.Parameters.Add(new SqlParameter("score", pms[0]));
+            st.Parameters.Add(new SqlParameter("uid", pms[1]));
+            st.Parameters.Add(new SqlParameter("gid", pms[2]));
+            st.Parameters.Add(new SqlParameter("id", Convert.ToInt32(Read_Max()[0]) + 1));
+            dbc c = new dbc(st);
+            c.cud();
+        }
+
+        public List<String> Read_Scores()
+        {
+            SqlCommand st = new SqlCommand("SELECT * FROM Scores");// JOIN Games ON Comments.gid=Games.id");
+
+            dbc c = new dbc(st);
+            return c.r(3);
+        }
+
+        private List<String> Read_Max()
+        {
+            dbc c = new dbc(new SqlCommand("SELECT max(id) FROM Scores"));
+            return c.r(1);
+        }
+    }
 }

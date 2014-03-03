@@ -49,6 +49,33 @@ namespace itp5proj {
         protected global::System.Web.UI.WebControls.Button scom;
         
         /// <summary>
+        /// ddl2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl2;
+        
+        /// <summary>
+        /// score control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox score;
+        
+        /// <summary>
+        /// sr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button sr;
+        
+        /// <summary>
         /// clo control.
         /// </summary>
         /// <remarks>

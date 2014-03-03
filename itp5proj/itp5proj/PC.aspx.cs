@@ -17,9 +17,12 @@ namespace itp5proj
             List<String> glist = ins.Read_Category("PC");
             CommentsDB ins2=new CommentsDB();
             List<String> clist = ins2.Read_Comments();
+            ScoresDB ins3 = new ScoresDB();
+            List<String> slist = ins3.Read_Scores();
             for (int i=0; i < glist.Count;i++ )
             {
                 ddl.Items.Add(new ListItem(glist[i].Split(((char)007))[1], glist[i].Split(((char)007))[0]));
+                ddl2.Items.Add(new ListItem(glist[i].Split(((char)007))[1], glist[i].Split(((char)007))[0]));
                 TableCell tc1 = new TableCell();
                 tc1.Text = "<b>" + glist[i].Split(((char)007))[1] + "</b><br/>" + glist[i].Split(((char)007))[2];
                 TableCell tc2 = new TableCell();
@@ -48,6 +51,7 @@ namespace itp5proj
             if (nc != null)
             {
                 scom.Enabled = true;
+                sr.Enabled = true;
                 clo.Visible = false;
             }
         }
@@ -69,5 +73,15 @@ namespace itp5proj
                 
 
          }
+
+        protected void sr_Click(object sender, EventArgs e)
+        {
+            ScoresDB ins = new ScoresDB();
+            List<String> ls = new List<String>();
+            ls.Add(score.Text);
+            ls.Add(Request.Cookies["logincookie"]["id"]);
+            ls.Add(ddl2.SelectedItem.Value);
+            ins.Create_New_Score(ls);
+        }
     }
 }

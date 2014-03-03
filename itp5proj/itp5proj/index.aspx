@@ -13,5 +13,6 @@
                 Modify Users<br />
                 Password change<br />
                 more...
+                Rating not done yet, do not use
             </div>
     </asp:Content>
