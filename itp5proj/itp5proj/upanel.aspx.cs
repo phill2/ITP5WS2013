@@ -16,6 +16,7 @@ namespace itp5proj
             HttpCookie nc = Request.Cookies["logincookie"];
             if (nc != null)
             {
+                paneltext.Visible = false;
                 reg.Visible = true;
                 if (nc["type"] == "moderator" || nc["type"] == "admin") mod.Visible = true;
                 if (nc["type"] == "admin")
@@ -41,14 +42,18 @@ namespace itp5proj
             List<String> ret = ins.Read_Login(Request.Cookies["logincookie"]["nickname"], c.GetMd5Hash(cp.Text));
             if (ret.Count != 0)
             {
-                if (np.Text == npc.Text)
+                if (np.Text != npc.Text)
                 {
                     warn.Text = "New Password and Confirmation must match!";
                     warn.Visible = true;
                 }
                 else
                 {
-                    ins.Update_Password(Request.Cookies["logincookie"]["nickname"], c.GetMd5Hash(cp.Text), c.GetMd5Hash(np.Text));
+                    ret = new List<String>();
+                    ret.Add(Request.Cookies["logincookie"]["nickname"]);
+                    ret.Add(c.GetMd5Hash(cp.Text));
+                    ret.Add(c.GetMd5Hash(np.Text));
+                    ins.Update_Password(ret);
                 }
             }
             else

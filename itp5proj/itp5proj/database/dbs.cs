@@ -126,12 +126,12 @@ namespace itp5proj
             c.cud();
         }
 
-        public void Update_Password(String un, String pwd, String pwd2)
+        public void Update_Password(List<String> pms)
         {
             SqlCommand st = new SqlCommand("UPDATE Users SET password=@pwd2 WHERE username=@un AND password=@pwd");
-            st.Parameters.Add(new SqlParameter("un", un));
-            st.Parameters.Add(new SqlParameter("pwd", pwd));
-            st.Parameters.Add(new SqlParameter("pwd", pwd2));
+            st.Parameters.Add(new SqlParameter("un", pms[0]));
+            st.Parameters.Add(new SqlParameter("pwd", pms[1]));
+            st.Parameters.Add(new SqlParameter("pwd2", pms[2]));
             dbc c = new dbc(st);
             c.cud();
         }

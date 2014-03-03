@@ -50,9 +50,14 @@ namespace itp5proj
                     nm.From = new MailAddress("philipp.langer2@google.com");
                     nm.To.Add(new MailAddress(email.Text));
                     nm.Subject = "Your new ITP5-Gaming-Website Account";
-                    nm.Body = "Your new account has been created. Your Username is " + user.Text + " and your password is " + pwd.Text + "<br/> Greetings,";
-                    SmtpClient smtp = new SmtpClient("smtp.technikum-wien.at");
+                    nm.Body = "Your new account has been created. Your Username is " + user.Text + " and your password is " + pwd.Text + " Greetings, The Website-Team";
+                    SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+                    smtp.Credentials = new System.Net.NetworkCredential("itp5projgw@gmail.com", "project5SMTP");
+                    smtp.EnableSsl = true;
                     smtp.Send(nm);
+
+                    warn.Text = "Your account was successfully created. Check your email address for your username and password.";
+                    warn.Visible = true;
                 }
             }
         }

@@ -25,9 +25,11 @@ namespace itp5proj
             MailMessage nm = new MailMessage();
             nm.From = new MailAddress(mail.Text);
             nm.To.Add(new MailAddress("philipp.langer2@google.com"));
-            nm.Subject = "Kontaktierung";
+            nm.Subject = "GW-Contact";
             nm.Body = "Message from " + vname.Text + " " + nname.Text + ": " + message.Text;
-            SmtpClient smtp = new SmtpClient("smtp.technikum-wien.at");
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+            smtp.Credentials = new System.Net.NetworkCredential("itp5projgw@gmail.com ", "project5SMTP");
+            smtp.EnableSsl = true;
             smtp.Send(nm);
         }
     }

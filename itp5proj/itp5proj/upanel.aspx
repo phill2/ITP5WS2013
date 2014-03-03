@@ -10,9 +10,9 @@
             <asp:Panel ID="reg" Visible="false" runat="server">
                 <b>AccountSettings</b><br />
                 Password Change:<br />
-                Current Password:<asp:TextBox ID="cp" runat="server"/><br />
-                New Password:<asp:TextBox ID="np" runat="server"/><br />
-                Confirm New Password<asp:TextBox ID="npc" runat="server"/><br />
+                Current Password:<asp:TextBox ID="cp" TextMode="Password" runat="server"/><br />
+                New Password:<asp:TextBox ID="np" TextMode="Password" runat="server"/><br />
+                Confirm New Password<asp:TextBox ID="npc" TextMode="Password" runat="server"/><br />
                 <asp:Button OnClick="Unnamed_Click" Text="Change Password" runat="server" /><asp:Label ID="warn" Visible="false" runat="server"/><br />
             </asp:Panel>
         </div>
